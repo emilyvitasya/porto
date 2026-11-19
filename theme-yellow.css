@@ -176,7 +176,6 @@ body {
 }
 /* Email dan teks panjang di kartu kontak: pecah di tengah kata jika perlu */
 .cc-value {
-  word-break: normal;
-  overflow-wrap: anywhere;
-  font-size: 0.95rem;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
 }
