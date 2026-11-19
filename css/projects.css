@@ -1,0 +1,87 @@
+/* =========================================================
+   Projects grid, project cards, and modal helpers
+   Dimuat setelah styles.css dan dashboard.css
+   ========================================================= */
+
+/* Pastikan atribut hidden selalu menyembunyikan elemen */
+[hidden] {
+  display: none !important;
+}
+
+/* Grid kartu proyek */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md, var(--shadow-sm));
+}
+
+.project-card h3 {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: var(--c-ink);
+}
+
+.project-desc {
+  font-size: 0.92rem;
+  color: var(--c-muted);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.project-card .btn {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* Modal: tampil hanya saat class .open aktif */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.open {
+  display: flex;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Navigasi aktif */
+.nav-link.active {
+  color: var(--c-primary);
+}

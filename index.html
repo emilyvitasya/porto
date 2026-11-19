@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Emily Vitasya Haloho, Data Analyst and Actuarial Science Graduate focused on data analysis, statistical modeling, and business intelligence." />
+  <meta name="theme-color" content="#d99a00" />
+
+  <!-- Open Graph: pratinjau saat link dibagikan. GANTI URL dengan domain aslimu -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Emily Vitasya Haloho" />
+  <meta property="og:title" content="Emily Vitasya Haloho | Data Analyst" />
+  <meta property="og:description" content="Data Analyst and Actuarial Science Graduate. Projects in data analysis, churn prediction, and business intelligence." />
+  <meta property="og:url" content="https://GANTI-DOMAIN-KAMU.com/" />
+  <meta property="og:image" content="https://GANTI-DOMAIN-KAMU.com/assets/profile.jpg" />
+  <meta property="og:image:alt" content="Portrait of Emily Vitasya Haloho" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Emily Vitasya Haloho | Data Analyst" />
+  <meta name="twitter:description" content="Data Analyst and Actuarial Science Graduate." />
+  <meta name="twitter:image" content="https://GANTI-DOMAIN-KAMU.com/assets/profile.jpg" />
+
+  <title>Emily Vitasya Haloho | Data Analyst</title>
+
+  <!-- Tema disimpan di browser. Script kecil ini dijalankan lebih awal agar tidak ada kedipan -->
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.setAttribute("data-theme", "dark");
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/theme-yellow.css" />
+  <link rel="stylesheet" href="css/features.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Emily<span>.</span>Haloho</a>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span aria-hidden="true">◐</span>
+        </button>
+
+        <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="greeting">Hello, I'm</p>
+          <h1 class="name">Emily Vitasya Haloho</h1>
+          <h2 class="headline">Data Analyst | Actuarial Science Graduate</h2>
+          <p class="hero-desc">
+            Passionate about turning data into clear, actionable insights. I enjoy exploring data analytics,
+            statistical modeling, and business intelligence to help teams make better decisions.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">Explore My Projects</a>
+            <a href="assets/cv.pdf" class="btn btn-outline" download>Download CV</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="photo-frame">
+            <img src="assets/profile.jpg" alt="Portrait of Emily Vitasya Haloho" class="profile-img" data-fallback="EH" />
+          </div>
+          <div class="floating-card card-a">
+            <span class="fc-label">Focus Area</span>
+            <span class="fc-value">Data Analytics</span>
+          </div>
+          <div class="floating-card card-b">
+            <span class="fc-label">Tools</span>
+            <span class="fc-value">Python · SQL · Tableau</span>
+          </div>
+          <svg class="bar-graphic" viewBox="0 0 120 80" aria-hidden="true" focusable="false">
+            <rect x="0"  y="50" width="16" height="30" rx="3"/>
+            <rect x="24" y="35" width="16" height="45" rx="3"/>
+            <rect x="48" y="20" width="16" height="60" rx="3"/>
+            <rect x="72" y="8"  width="16" height="72" rx="3"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">About Me</span>
+          <h2>Curious mind, structured thinker</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am an Actuarial Science graduate (S1) from Institut Teknologi Sumatera (ITERA), with a strong
+              foundation in statistics, data analysis, financial mathematics, and risk modeling.
+            </p>
+            <p>
+              I enjoy working with data to find patterns, test assumptions, and communicate results clearly.
+              My projects cover operational analysis, customer churn prediction, and statistical study,
+              using Python, SQL, and R.
+            </p>
+            <p>
+              Outside of data, I have experience in leadership and academic support through student
+              organizations, teaching assistant roles, and community programs for small businesses.
+            </p>
+          </div>
+
+          <ul class="about-highlights">
+            <li>
+              <span class="hl-icon">01</span>
+              <div>
+                <h4>Analytical</h4>
+                <p>Breaks down complex problems into measurable parts.</p>
+              </div>
+            </li>
+            <li>
+              <span class="hl-icon">02</span>
+              <div>
+                <h4>Detail-oriented</h4>
+                <p>Checks data quality and methodology before drawing insights.</p>
+              </div>
+            </li>
+            <li>
+              <span class="hl-icon">03</span>
+              <div>
+                <h4>Problem Solver</h4>
+                <p>Turns findings into recommendations that support decisions.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Skills</span>
+          <h2>Tools and methods I work with</h2>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Programming &amp; Data Analysis</h3>
+            <div class="badges">
+              <span class="badge">Python</span>
+              <span class="badge">SQL</span>
+              <span class="badge">Microsoft Excel</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Data Visualization &amp; Business Intelligence</h3>
+            <div class="badges">
+              <span class="badge">Tableau</span>
+              <span class="badge">Looker Studio</span>
+              <span class="badge">Data Visualization</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Statistical &amp; Analytical Methods</h3>
+            <div class="badges">
+              <span class="badge">Statistical Analysis</span>
+              <span class="badge">Hypothesis Testing</span>
+              <span class="badge">Time Series Analysis</span>
+              <span class="badge">Predictive Modeling</span>
+              <span class="badge">Machine Learning</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Other Tools</h3>
+            <div class="badges">
+              <span class="badge">Git &amp; GitHub</span>
+              <span class="badge">Microsoft Office</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Featured Projects</span>
+          <h2>Selected work</h2>
+          <p class="section-sub">Case studies from data analysis, data science, and business intelligence.</p>
+        </header>
+
+        <!-- Kartu proyek dirender oleh js/script.js -->
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== DASHBOARD ===== -->
+    <section id="dashboard" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Dashboard</span>
+          <h2>Key numbers at a glance</h2>
+          <p class="section-sub">Pick a project to see its headline metrics and breakdowns.</p>
+        </header>
+
+        <div class="dash-filter">
+          <label for="dash-select">Project</label>
+          <select id="dash-select"></select>
+        </div>
+
+        <div class="kpi-row" id="kpi-row"></div>
+        <div class="chart-grid" id="chart-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE & EDUCATION ===== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Experience</span>
+          <h2>Experience &amp; education</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <span class="tl-period">Aug 2023 – Dec 2023</span>
+            <h3>Facilitator (MBKM Program)</h3>
+            <p class="tl-org">BTPN Syariah, Bandar Lampung</p>
+            <ul class="tl-points">
+              <li>Educated customers on financial literacy and small business management, including basic bookkeeping of income, expenses, and cash flow.</li>
+              <li>Collected business data and prepared periodic progress reports on the program.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <span class="tl-period">Jul 2023 – Aug 2023</span>
+            <h3>Intern</h3>
+            <p class="tl-org">BPJS Ketenagakerjaan, North Sumatra</p>
+            <ul class="tl-points">
+              <li>Verified participant documents and processed membership data to keep administrative records accurate.</li>
+              <li>Coordinated with internal teams to deliver services to participants effectively.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <span class="tl-period">Aug 2021 – Jun 2023</span>
+            <h3>Teaching Assistant</h3>
+            <p class="tl-org">Institut Teknologi Sumatera (ITERA)</p>
+            <ul class="tl-points">
+              <li>Assisted lab sessions for Statistical Data Analysis (RStudio) and Actuarial Computing, guiding students through analysis and modeling tasks.</li>
+              <li>Assisted tutorials for Basic Physics and graded assignments with academic feedback.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <span class="tl-period">Aug 2021 – Dec 2024</span>
+            <h3>Internal Staff</h3>
+            <p class="tl-org">HIMAKTU ITERA (Student Organization)</p>
+            <ul class="tl-points">
+              <li>Coordinated internal activities and member engagement programs.</li>
+              <li>Managed membership administration and internal documentation.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <span class="tl-period">2020 – 2026</span>
+            <h3>B.Sc. in Actuarial Science</h3>
+            <p class="tl-org">Institut Teknologi Sumatera (ITERA), Lampung</p>
+            <p>GPA 3.38 / 4.00</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS (tampil otomatis jika CERTIFICATIONS di script.js diisi) ===== -->
+    <section id="certifications" class="section section-alt" hidden>
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Certifications</span>
+          <h2>Courses &amp; certificates</h2>
+        </header>
+        <div class="cards-grid" id="cert-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== WRITING (tampil otomatis jika WRITINGS di script.js diisi) ===== -->
+    <section id="writing" class="section" hidden>
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Writing</span>
+          <h2>Articles &amp; write-ups</h2>
+        </header>
+        <div class="cards-grid" id="writing-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">Contact</span>
+          <h2>Let's work together</h2>
+          <p class="section-sub">Open to data analyst opportunities, collaborations, and conversations about data.</p>
+        </header>
+
+        <div class="contact-grid">
+          <a href="mailto:emilyaza9@gmail.com" class="contact-card">
+            <span class="cc-label">Email</span>
+            <span class="cc-value">emilyaza9@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/emily-vitasya-haloho" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <span class="cc-label">LinkedIn</span>
+            <span class="cc-value">linkedin.com/in/emily-vitasya-haloho</span>
+          </a>
+          <a href="https://github.com/emilyvitasya" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <span class="cc-label">GitHub</span>
+            <span class="cc-value">github.com/emilyvitasya</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Emily Vitasya Haloho. Built with HTML, CSS, and JavaScript.</p>
+      <a href="#home" class="back-top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <!-- Tombol kembali ke atas, muncul saat scroll -->
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+
+  <!-- ===== PROJECT DETAIL MODAL ===== -->
+  <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-content">
+      <button class="modal-close" type="button" data-close aria-label="Close project details">&times;</button>
+      <span class="eyebrow" id="modal-category"></span>
+      <h3 id="modal-title"></h3>
+
+      <div class="modal-block">
+        <h4>My Role &amp; Approach</h4>
+        <p id="modal-role"></p>
+      </div>
+      <div class="modal-block">
+        <h4>Problem Statement</h4>
+        <p id="modal-problem"></p>
+      </div>
+      <div class="modal-block">
+        <h4>Tools &amp; Technologies</h4>
+        <div class="badges" id="modal-tools"></div>
+      </div>
+      <div class="modal-block">
+        <h4>Key Findings</h4>
+        <ul id="modal-findings"></ul>
+      </div>
+
+      <div class="modal-actions">
+        <a href="#" class="btn btn-primary" id="modal-link" target="_blank" rel="noopener noreferrer">View Project</a>
+        <a href="#" class="btn btn-outline" id="modal-dashboard" target="_blank" rel="noopener noreferrer" hidden>View Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+/* =========================================================
+   Fitur tambahan: mode gelap, tombol kembali ke atas,
+   animasi scroll, bar dashboard, sertifikat, dan writing.
+   Dimuat paling akhir di index.html agar menimpa tema kuning.
+   ========================================================= */
+
+/* ---------- Navbar actions (toggle tema + hamburger) ---------- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--c-border);
+  background: var(--c-card);
+  color: var(--c-ink);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.theme-toggle:hover {
+  transform: rotate(20deg);
+}
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Tombol kembali ke atas ---------- */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 900;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: var(--c-primary);
+  color: var(--c-ink);
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: var(--c-primary-dark);
+  color: #fff;
+}
+.back-to-top:focus-visible {
+  outline: 3px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Animasi scroll (reveal) ----------
+   JS menambahkan kelas "in-view". Aturan ini menggantikan .visible di styles.css. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.js .reveal.in-view,
+.js .reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Animasi bar dashboard ---------- */
+.chart-grid.is-visible .bar-fill {
+  animation: barGrow 0.8s ease-out both;
+}
+@keyframes barGrow {
+  from {
+    width: 0;
+  }
+}
+
+/* ---------- Kartu sertifikat dan writing ---------- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.cert-card,
+.writing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-left: 4px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  color: var(--c-ink);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cert-card:hover,
+.writing-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.cert-card h3,
+.writing-card h3 {
+  font-size: 1.02rem;
+  line-height: 1.4;
+}
+.card-meta {
+  font-size: 0.8rem;
+  color: var(--c-muted);
+}
+
+/* ---------- Mode gelap ----------
+   Selector :root[data-theme="dark"] lebih spesifik daripada aturan tema kuning. */
+:root[data-theme="dark"] {
+  --c-bg: #1a1500;
+  --c-bg-alt: #2a2200;
+  --c-card: #2a2200;
+  --c-ink: #fff6d6;
+  --c-text: #efe3b8;
+  --c-muted: #bfae78;
+  --c-primary: #f2b233;
+  --c-primary-dark: #ffd166;
+  --c-accent: #ffd166;
+  --c-border: #4a3c10;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
+:root[data-theme="dark"] body {
+  background: var(--c-bg);
+  color: var(--c-text);
+}
+
+/* Navbar dan menu */
+:root[data-theme="dark"] .navbar {
+  background: rgba(26, 21, 0, 0.85);
+}
+:root[data-theme="dark"] .navbar.scrolled {
+  background: rgba(26, 21, 0, 0.97);
+}
+:root[data-theme="dark"] .nav-menu {
+  background: var(--c-bg);
+}
+
+/* Hero dan dekorasi */
+:root[data-theme="dark"] .hero {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(242, 178, 51, 0.10), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(242, 178, 51, 0.08), transparent 40%),
+    var(--c-bg);
+}
+:root[data-theme="dark"] .shape-1 {
+  background: linear-gradient(135deg, #f2b233, #7a5a00);
+}
+:root[data-theme="dark"] .photo-frame {
+  background: linear-gradient(160deg, #3d3000, #2a2200);
+}
+
+/* Kartu dan panel */
+:root[data-theme="dark"] .theme-toggle,
+:root[data-theme="dark"] .kpi-card,
+:root[data-theme="dark"] .chart-card,
+:root[data-theme="dark"] .project-card,
+:root[data-theme="dark"] .skill-card,
+:root[data-theme="dark"] .cert-card,
+:root[data-theme="dark"] .writing-card,
+:root[data-theme="dark"] .timeline-item,
+:root[data-theme="dark"] .contact-card,
+:root[data-theme="dark"] .floating-card,
+:root[data-theme="dark"] .dash-filter select,
+:root[data-theme="dark"] .modal-content {
+  background: var(--c-card);
+  color: var(--c-text);
+}
+:root[data-theme="dark"] .project-insight {
+  background: #3d3000;
+  color: var(--c-text);
+}
+:root[data-theme="dark"] .timeline-item::before {
+  border-color: var(--c-bg);
+}
+
+/* Badge dan tombol */
+:root[data-theme="dark"] .badge {
+  background: #3d3000;
+  color: var(--c-ink);
+  border-color: #5c4a10;
+}
+:root[data-theme="dark"] .btn-primary {
+  color: #1a1500;
+}
+:root[data-theme="dark"] .back-top {
+  color: #ffd166;
+}
+
+/* ---------- Preferensi gerak rendah ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .chart-grid.is-visible .bar-fill {
+    animation: none;
+  }
+  .back-to-top,
+  .theme-toggle,
+  .cert-card,
+  .writing-card {
+    transition: none;
+  }
+}
