@@ -175,7 +175,20 @@ body {
   color: #1a1500;
 }
 /* Email dan teks panjang di kartu kontak: pecah di tengah kata jika perlu */
+/* Kartu kontak: lebih lebar dan teks sedikit lebih kecil agar email muat satu baris */
+.contact-grid {
+  max-width: 960px;
+}
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.contact-card {
+  padding: 30px 20px;
+}
 .cc-value {
-  overflow-wrap: anywhere !important;
-  word-break: normal !important;
+  font-size: 0.9rem;
+  word-break: normal;
+  overflow-wrap: normal;
 }
